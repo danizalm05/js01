@@ -3,10 +3,10 @@
 // file:///home/user/Desktop/d/js/codingtrain/PerlinNoiseFlowField/Noise1d/index.html
 // https://www.youtube.com/watch?v=y7sgcFhk6ZM&list=PLRqwX-V7Uu6ZV4yEcW3uDwOgGXKUUsPOM&index=5
 //
-var start = 0;
-var inc = 0.01;
-var xoff1 = 0; 
-var xoff2 = 1000;  
+var start  = 0;
+var inc  = 0.01;
+var xoff1  =  0; 
+var xoff2  = 1000;  
 function setup() {
   createCanvas(400,400);
  }
