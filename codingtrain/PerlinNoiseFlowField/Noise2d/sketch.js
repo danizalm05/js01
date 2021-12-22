@@ -1,7 +1,7 @@
 
 // The Nature of Code
 // https://www.youtube.com/watch?v=D1BBj2VaBl4&list=PLRqwX-V7Uu6ZV4yEcW3uDwOgGXKUUsPOM&index=7
-
+// https://github.com/nature-of-code/noc-examples-p5.js/tree/master/chp00_introduction
 
 
 
