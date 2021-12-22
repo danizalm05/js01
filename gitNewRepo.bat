@@ -12,7 +12,8 @@ git status
 pause
 git add .
 git commit -m   %RANDOM%
-git  
+pause 
+cls
 git push -u origin master
 
 pause
