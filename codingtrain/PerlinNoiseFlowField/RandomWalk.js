@@ -26,16 +26,27 @@ class Walker {
 
   step() {
     var choice = floor(random(4));
-    if (choice === 0) {
+    switch(choice){
+	
+	case 0:  
       this.x++;
-    } else if (choice == 1) {
+	break  
+      
+	case 1:
       this.x--;
-    } else if (choice == 2) {
-      this.y++;
-    } else {
-      this.y--;
-    }
-    this.x = constrain(this.x,0,width-1);
+    break 
+	
+	case 2:
+	    this.y++ 
+    break    
+    
+	case 3:
+      this.y-- 
+    break 
+    
+	}
+	
+	this.x = constrain(this.x,0,width-1);
     this.y = constrain(this.y,0,height-1);
   }
 }
