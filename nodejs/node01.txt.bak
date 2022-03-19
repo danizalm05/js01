@@ -1,0 +1,26 @@
+ https://www.tutorialspoint.com/nodejs/nodejs_npm.htm
+ https://nodejs.org/en/
+ https://nodejs.org/api/
+ 
+ NPM  (Node Package Manager)  
+ CLI (Command Line Interface) 
+   provides two main functionalities
+   
+   1. Online repositories for node.js packages/modules which are 
+   searchable on search.nodejs.org
+
+   2. Command line utility to install Node.js packages, do 
+   version management and dependency management of Node.js packages.
+
+   
+ npm install <Module Name>: Installing Modules  localy
+ 
+ npm install <Module Name> -g: Installing Modules  Globally
+      Globally installed packages/dependencies are stored in 
+	  system directory. 
+	  Can be used in CLI   but cannot be imported using require() 
+ 
+ 
+ 
+ npm ls: list all the locally installed modules.
+ npm ls -g: list all the globally installed modules.
