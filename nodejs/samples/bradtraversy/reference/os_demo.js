@@ -27,7 +27,7 @@ console.log("Free memory = "+ os.freemem());
 console.log("Total memory = " +os.totalmem());
 
 // Home dir
-console.log("Home dir ="+ os.homedir());
+console.log("Home dir = "+ os.homedir());
 
 // Uptime
 console.log("uptime = " +os.uptime()); 

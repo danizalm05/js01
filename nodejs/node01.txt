@@ -1,7 +1,13 @@
  https://www.tutorialspoint.com/nodejs/nodejs_npm.htm
  https://nodejs.org/en/
  https://nodejs.org/api/
- 
+ 1. Node.js Full Course for Beginners  Dave Gray
+ https://www.youtube.com/watch?v=JZXQ455OT3A&list=PL0Zuz27SZ-6PFkIxaJ6Xx_X46avTM1aYw&index=1
+ https://www.youtube.com/watch?v=f2EqECiTBL8
+
+
+
+
  NPM  (Node Package Manager)  
  CLI (Command Line Interface) 
    provides two main functionalities
