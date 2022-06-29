@@ -10,10 +10,15 @@ D:\js01\nodejs\samples\DaveGray\01TUT\files>
  */
 
  const fs = require('fs');
- 
+ const os = require('os');
+
+ console.log("os.type() = ", os.type());
+ console.log("os.version() = ", os.version());
+
  if(! fs.existsSync('./new')){  //  File does not exists
         fs.mkdir('./new', (err)=>{// Create  directory
            if(err) throw err;
+           //console.log(global);
            console.log("Directory created");
 
        })

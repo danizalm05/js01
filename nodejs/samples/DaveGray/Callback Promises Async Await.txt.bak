@@ -1,0 +1,105 @@
+ https://www.loginradius.com/blog/engineering/callback-vs-promises-vs-async-await/
+ 
+ asynchronous or non-blocking:  Single thread is used to handle 
+            multiple requests. 
+ synchronous  or blocking: Single thread is used to handle 
+             one request. 
+ Single-threaded event handling systems are usually implemented 
+ using an event or message queue. So when a program is being 
+ executed synchronously, the thread will wait until the first 
+ statement is finished to jump to the second one, 
+ In asynchronous execution, even if the first one was not 
+ completed, the execution will continue.	
+
+Callbacks: function that is passed to another function. 
+When the first function is done, it will run the second function. 
+
+
+In the next function the callback is the function that 
+is passed as the argument to setTimeout.
+
+function printString(){
+   console.log("Tom"); 
+   //Wait 300 ms and print "Jacob"
+   setTimeout(() =>  { console.log("Jacob"); }, 300); 
+   console.log("Mark")
+}
+
+printString();
+
+
+If that were sync code, we would have encountered the following 
+output:
+
+Tom
+Jacob
+Mark
+
+
+But the setTimeout is an async function then the output of the 
+above code will be:
+
+Tom
+Mark
+Jacob
+
+
+Promises:
+
+When we define a promise in JavaScript, it will be resolved when 
+ the time comes, or it will get rejected. 
+ It sounds like the IF condition. 
+ But there are huge differences between them.
+
+A promise is used to handle the asynchronous result of an 
+operation. JavaScript is designed to not wait for an asynchronous 
+block of code to completely execute before other synchronous 
+parts of the code can run. 
+With Promises, we can defer the execution of a code block until 
+an async request is completed. 
+This way, other operations can keep running without interruption.
+
+States of Promises:
+-------------------------
+First of all, a Promise is an object. There are 3 states of the 
+Promise object:
+
+   1. Pending: Initial State, before the Promise succeeds or fails.
+   2. Resolved: Completed Promise
+   3. Rejected: Failed Promise, throw an error
+
+For example, when we request data from the server by using a 
+Promise, it will be in pending mode until we receive our data.
+
+If we achieve to get the information from the server, the Promise 
+will be resolved successfully. But if we don’t get the information,
+then the Promise will be in the rejected state.
+
+Creating a Promise:
+---------------------
+
+Firstly, we use a constructor to create a Promise object.
+ The promise has two parameters, one for success (resolve) and
+ one for fail (reject):
+ 
+const myFirstPromise = new Promise((resolve, reject) => { 
+    const condition = true;   
+    if(condition) {
+         setTimeout(function(){
+             resolve("Promise is resolved!"); // fulfilled
+        }, 300);
+    } else {    
+        reject('Promise is rejected!');  
+    }
+});
+
+In the above Promise If Condition is true, resolve the promise 
+returning the “Promise is resolved ”, else return an error 
+“Promise is rejected”. 
+
+Using Promise:
+---------------
+To use the above create Promise we use then() for resolve and 
+catch() for reject. 
+
+Using Promise:
