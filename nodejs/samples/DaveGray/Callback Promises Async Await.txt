@@ -137,3 +137,56 @@ console.
 What is Chaining?
 
 -----------------
+
+ Sometimes we need to call multiple asynchronous requests, then after the first Promise is resolved (or rejected), a new process will start to which we can attach it directly by a method called chaining.
+
+So we create another promise:
+
+const helloPromise  = function() {
+  return new Promise(function(resolve, reject) {
+    const message = `Hi, How are you!`;
+
+    resolve(message)
+  });
+}
+We chain this promise to our earlier “myFirstPromise” operation like so:
+
+const demoPromise= function() {
+
+  myFirstPromise
+  .then(helloPromise)
+  .then((successMsg) => {
+      console.log("Success:" + successMsg);
+  })
+  .catch((errorMsg) => { 
+      console.log("Error:" + errorMsg);
+  })
+}
+
+demoPromise();
+
+Since our condition is true, the output to our console is:
+
+Hi, How are you!
+
+Once the “hello” promise is chained with .then, subsequent .then utilizes data from the previous one.
+
+Async/Await:
+----------------------------
+Await is basically syntactic sugar for Promises. It makes your asynchronous code look more like synchronous/procedural code, which is easier for humans to understand.
+
+Syntax of Async and Await:
+
+async function printMyAsync(){
+  await printString("one")
+  await printString("two")
+  await printString("three")
+}
+
+You can see that we use the “async” keyword for the wrapper function printMyAsync. This lets JavaScript know that we are using async/await syntax, and is necessary if you want to use Await. 
+This means you can’t use Await at the global level. It always needs a wrapper function. Or we can say await is only used with an async function. 
+
+asynchronous or non-blocking:  Single thread is used to handle 
+            multiple requests. 
+synchronous  or blocking: Single thread is used to handle 
+             one request. 
