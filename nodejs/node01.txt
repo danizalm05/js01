@@ -31,7 +31,7 @@
 	  system directory. 
 	  Can be used in CLI   but cannot be imported using require() 
  
- 
+ npm install http-server -g#install  http-server 
  
  npm ls: list all the locally installed modules.
  npm ls -g: list all the globally installed modules.
@@ -113,5 +113,17 @@ so the item will  look somthing this:
  
  npm i  uuid : install  the  uuid 
   
-
   
+--------   Workflow: Node     ------------------
+
+https://www.youtube.com/watch?v=FjWbUK2HdCo&list=PLRqwX-V7Uu6Zu_uqEA6NqhLzKLACwU74X  
+6:10
+   how I use node.js and global packages (to generate p5 sketches, 
+   run a web server)  as part of my workflow.
+node -v // node version  
+
+1. npm install http-server -g# install  http-server 
+2. http-server #runing the server
+3. npm install p5-manager -g # install p5 managger
+4. p5 generate  --bundle "mysketch"# Create basic P5 application
+5. http-server mysketch# running on  http://127.0.0.1:8080

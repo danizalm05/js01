@@ -1,0 +1,41 @@
+<!--
+// fetch() - Working With Data & APIs in JavaScript
+ //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+ //https://github.com/CodingTrain/Intro-to-Data-APIs-JS/tree/source/module1
+ // https://www.youtube.com/watch?v=tc8DU14qX6I&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=3
+ // https://github.com/CodingTrain/Intro-to-Data-APIs-JS/tree/source/module1/01_fetch_image
+
+ 
+-->
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Train: Data/APIs 1</title>
+  </head>
+  <body>
+    <h1>Fetch a Rainbow</h1>
+    <img src="" id="rainbow" width="480" />
+    <script>
+      console.log('about to fetch a rainbow');
+
+      catchRainbow()
+        .then(response => {
+          console.log('yay');
+        })
+        .catch(error => {
+          console.log('error!');
+          console.error(error);
+        });
+     
+      async function catchRainbow() {
+        const response = await fetch('rainbow.jpg');
+        const blob = await response.blob();
+        document.getElementById('rainbow').src =
+                             URL.createObjectURL(blob);
+      }
+    </script>
+  </body>
+</html>

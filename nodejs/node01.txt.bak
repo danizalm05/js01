@@ -1,0 +1,122 @@
+ https://www.tutorialspoint.com/nodejs/nodejs_npm.htm
+ https://nodejs.org/en/
+ https://nodejs.org/api/
+ https://www.npmjs.com/
+ 
+ NPM Node Package Manager Modules | NPM Tutorial for Beginners
+ https://www.youtube.com/watch?v=oGO_-DWTmKA&list=PL0Zuz27SZ-6PFkIxaJ6Xx_X46avTM1aYw&index=3
+6:15  11:21
+
+
+
+ NPM  (Node Package Manager)  
+ CLI (Command Line Interface) 
+   provides two main functionalities
+   
+   1. Online repositories for node.js packages/modules which are 
+   searchable on search.nodejs.org
+
+   2. Command line utility to install Node.js packages, do 
+   version management and dependency management of Node.js packages.
+
+   
+ 
+ npm install: Install the modules of the cutrent file.
+ 
+ npm install <Module Name>: Installing Modules  localy
+ npm i <Module Name>: Installing Modules  localy
+ 
+ npm install <Module Name> -g: Installing Modules  Globally
+      Globally installed packages/dependencies are stored in 
+	  system directory. 
+	  Can be used in CLI   but cannot be imported using require() 
+ 
+ 
+ 
+ npm ls: list all the locally installed modules.
+ npm ls -g: list all the globally installed modules.
+ npm update <Module Name>:Update
+ npm search <Module Name>: Search
+ 
+ npm init:  Generate 'package.json'
+ 
+ -------------   Install a new module  --------------
+ Run: npm install < module name>.
+  This command  will add next lines in 'package.json':
+                    "author": "",
+                    "license": " ",
+                    "dependencies": {
+                        "< module name>": "^2.28.0"
+                    }
+And  create/change :
+    a. The file 'package-lock.json'
+    b. The directory 'node_modules'
+
+Before using git push origin  master  add the  file '.gitignore'
+	and add one line:'node_modules'.  This  way the files in 'node_modules' won't
+	be uploaded to github.
+	
+ 
+ 
+ 
+ 
+ 
+Run: npm install date-fns.
+This command  will add next lines in 'package.json':
+                    "author": "",
+                    "license": "ISC",
+                    "dependencies": {
+                        "date-fns": "^2.28.0"
+                    }
+And  create/change :
+     'package-lock.json'
+     'node_modules directory'
+ 
+ 
+ 
+ ----------------------------------------
+ 
+ 
+       nodemon
+  --------------------------
+ 1. npm install nodemon -g  : install  nodemon globely to monitor new saved file.
+ 2. to run index.js  just 'nodemon'
+ 3. To exit nodemon press  Ctl + C.
+ --------------------
+ Anoter way to start 'nodemon':
+ npm install nodemon -D:  install  nodemon as a 'DEV' dependecy. This way the 
+	    monitoring will  statrt automating when this file is running
+------------------------------		
+ If you run  nodemon in terminal the 'index.js' is loaded and excuted whenever you 
+ change the file
+ In caseof  an Error massage '... running scripts is disabled on this system'
+ 
+You must hange the execution policy for the default (LocalMachine) scope:
+1. open the Windows PowerShell in Administration Mode
+2. type 'Get-ExecutionPolicy' and press Enter
+
+3.If the machine returns "Restricted"
+  type 'Set-ExecutionPolicy Unrestrict' press Enter
+  press: y
+  
+ -------  scripts   --------
+In json file add to the "scripts":  'start: node <file name>"' "nodemon<file name>"
+so the item will  look somthing this: 
+
+ "scripts": {
+    "start": "node index", 
+    "dev": "nodemon index"
+    
+  }, 
+  
+ npm run dev:  strart the project 
+ 
+ npm i  uuid : install  the  uuid 
+  
+  
+--------   Workflow: Node     ------------------
+
+https://www.youtube.com/watch?v=FjWbUK2HdCo&list=PLRqwX-V7Uu6Zu_uqEA6NqhLzKLACwU74X  
+
+   how I use node.js and global packages (to generate p5 sketches, 
+   run a web server)  as part of my workflow.

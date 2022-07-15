@@ -1,31 +1,40 @@
- <!DOCTYPE html>
-<!https://www.youtube.com/watch?v=7tIdAJVjwyg&index=8&list=PL3LHCvSXd3vooUEwk_L2XRtqVxJumchjC>
- <html>
-<head>
-  <meta charset=utf-8 />
-  <title>Basic</title>
-  <style>
-      body, html {
-          width: 100%;
-          height: 100%;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color:white;
-      }
-      canvas {
-          position:absolute;
-      }
-  </style>
-</head>
-  <canvas id="canvas" witdh='300' height='300'></canvas>
+<!--
+// fetch() - Working With Data & APIs in JavaScript
+ //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+ //https://github.com/CodingTrain/Intro-to-Data-APIs-JS/tree/source/module1
+ // https://www.youtube.com/watch?v=tc8DU14qX6I&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=3
+ // https://github.com/CodingTrain/Intro-to-Data-APIs-JS/tree/source/module1/01_fetch_image
 
-   <script src="js/switch.js"></script>
-   
-   <b> dfgdgdgf</b>
  
-</body>
+-<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Train: Data and APIs Project 1</title>
+  </head>
+  <body>
+    Open the JavaScript Console to see the output.
+    <script>
+      // Data from: https://data.giss.nasa.gov/gistemp/
+      // Mean from: https://earthobservatory.nasa.gov/world-of-change/DecadalTemp
+
+      getData()
+
+      async function getData() {
+        // const response = await fetch('testdata.csv');
+        const response = await fetch('ZonAnn.Ts+dSST.csv');
+        const data = await response.text();
+
+        const table = data.split('\n').slice(1);
+        table.forEach(row => {
+          const cols = row.split(',');
+          const year = cols[0]
+          const temp = cols[1]
+          console.log(year, temp)
+        });
+      }
+    </script>
+  </body>
 </html>
- 
-    
-  
