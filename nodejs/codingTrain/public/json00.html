@@ -1,0 +1,57 @@
+<!--
+1.4: JSON - Working with Data and APIs in JavaScript
+Get lat and log of a specific satlite each refrese will update this two values
+
+https://www.youtube.com/watch?v=uxf0--uiX0I&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=6
+https://www.youtube.com/watch?v=nZaZ2dB6pow&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=7
+
+https://github.com/CodingTrain/Intro-to-Data-APIs-JS/blob/source/module1/03_fetch_json/index.html
+https://wheretheiss.at/    // The location of the  space lab
+
+https://wheretheiss.at/w/developer // Documantion of the API
+https://api.wheretheiss.at/v1/satellites/25544 // Data of a specific satlite
+
+4:07
+
+-->
+
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+    <title>Fetch JSON from API and map lat lon</title>
+	  
+  </head>
+  <body>
+    <h1>Where is the ISS?</h1>
+
+    <p>
+      latitude: <span id="lat"></span>°<br />
+      longitude: <span id="lon"></span>°
+    </p>
+
+
+   <script>
+     
+     const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
+     //Get lat and log of a specific satlite each refrese will update this two values
+
+      async function getISS() {
+        const response = await fetch(api_url);
+        const data = await response.json();
+        const { latitude, longitude } = data;
+        document.getElementById('lat').textContent = latitude.toFixed(2);
+        document.getElementById('lon').textContent = longitude.toFixed(2)
+        console.log(data);
+      }
+      getISS()  
+  </script>
+     
+  </body>
+</html>
+  
