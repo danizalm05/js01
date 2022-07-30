@@ -1,17 +1,22 @@
 <!--
 1.4: JSON - Working with Data and APIs in JavaScript
-Get lat and log of a specific satlite each refrese will update this two values
+ https://www.youtube.com/watch?v=uxf0--uiX0I&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=6
 
-https://www.youtube.com/watch?v=uxf0--uiX0I&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=6
-https://www.youtube.com/watch?v=nZaZ2dB6pow&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=7
+1.5 Mapping Geolocation with Leaflet.js - Working with Data and APIs 
+ https://www.youtube.com/watch?v=nZaZ2dB6pow&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=7
 
 https://github.com/CodingTrain/Intro-to-Data-APIs-JS/blob/source/module1/03_fetch_json/index.html
 https://wheretheiss.at/    // The location of the  space lab
 
+8:00
+Leaflet
+https://leafletjs.com/
+https://leafletjs.com/examples/quick-start/       //Leaflet Quick Start Guide
+
 https://wheretheiss.at/w/developer // Documantion of the API
 https://api.wheretheiss.at/v1/satellites/25544 // Data of a specific satlite
 
-4:07
+ 
 
 -->
 
@@ -23,7 +28,18 @@ https://api.wheretheiss.at/v1/satellites/25544 // Data of a specific satlite
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	
+	  
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+     crossorigin=""/> 
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""></script>
+     <style>
+        #issMap { height: 480px; width: 580px}
+
+     </style>
     <title>Fetch JSON from API and map lat lon</title>
 	  
   </head>
@@ -34,13 +50,23 @@ https://api.wheretheiss.at/v1/satellites/25544 // Data of a specific satlite
       latitude: <span id="lat"></span>°<br />
       longitude: <span id="lon"></span>°
     </p>
+    <div id="issMap"></div>
 
+    </div>
 
    <script>
-     
+     const mymap = L.map('issMap').setView([0, 0], 1 );
+     const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+     const attributions = {
+         maxZoom: 19,
+        attribution: '© OpenStreetMap'
+     }
+     L.tileLayer(tileUrl,{attributions}).
+     addTo(mymap);
+
      const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
      //Get lat and log of a specific satlite each refrese will update this two values
-
+      console.log(api_url)
       async function getISS() {
         const response = await fetch(api_url);
         const data = await response.json();
