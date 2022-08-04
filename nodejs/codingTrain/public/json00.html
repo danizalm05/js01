@@ -2,18 +2,21 @@
 1.4: JSON - Working with Data and APIs in JavaScript
  https://www.youtube.com/watch?v=uxf0--uiX0I&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=6
 
-1.5 Mapping Geolocation with Leaflet.js - Working with Data and APIs 
+1.5 Mapping Geolocation with Leaflet.js 
  https://www.youtube.com/watch?v=nZaZ2dB6pow&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=7
 
 https://github.com/CodingTrain/Intro-to-Data-APIs-JS/blob/source/module1/03_fetch_json/index.html
 https://wheretheiss.at/    // The location of the  space lab
 
-10:30
+1.6 Refreshing Data with setInterval() 
+https://www.youtube.com/watch?v=jKQUHGpOHqg&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=8
+
 Leaflet
 https://leafletjs.com/
 https://leafletjs.com/examples/quick-start/       //Leaflet Quick Start Guide
 https://leafletjs.com/reference
 https://leafletjs.com/reference#marker
+https://leafletjs.com/examples/custom-icons/
 
 https://wheretheiss.at/w/developer // Documantion of the API
 https://api.wheretheiss.at/v1/satellites/25544 // Data of a specific satlite
@@ -58,15 +61,22 @@ https://api.wheretheiss.at/v1/satellites/25544 // Data of a specific satlite
 
    <script>
      const mymap = L.map('issMap').setView([0, 0], 1 );
-     const marker = L.marker([0, 0]).addTo(mymap);
 
+     const  issIcon = L.icon({
+              iconUrl: 'sg.png',
+              iconSize:     [50, 32], // size of the icon
+              iconAnchor:   [25, 16], // point of the icon which will correspond to marker's location
+             
+          });
+
+
+     const marker = L.marker([0, 0],{icon: issIcon}).addTo(mymap);
      const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
      const attributions = {
          maxZoom: 19,
         attribution: '© OpenStreetMap'
      }
-     L.tileLayer(tileUrl,{attributions}).
-     addTo(mymap);
+     L.tileLayer(tileUrl,{attributions}).addTo(mymap);
 
      const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
      //Get lat and log of a specific satlite each refrese will update this two values
@@ -82,7 +92,7 @@ https://api.wheretheiss.at/v1/satellites/25544 // Data of a specific satlite
         document.getElementById('lat').textContent = latitude.toFixed(2);
         document.getElementById('lon').textContent = longitude.toFixed(2);
         
-        console.log(data);
+        //console.log(data);
       }
       getISS()  
   </script>
