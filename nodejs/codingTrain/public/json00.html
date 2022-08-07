@@ -11,6 +11,10 @@ https://wheretheiss.at/    // The location of the  space lab
 1.6 Refreshing Data with setInterval() 
 https://www.youtube.com/watch?v=jKQUHGpOHqg&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=8
 
+
+
+
+
 Leaflet
 https://leafletjs.com/
 https://leafletjs.com/examples/quick-start/       //Leaflet Quick Start Guide
@@ -64,7 +68,7 @@ https://api.wheretheiss.at/v1/satellites/25544 // Data of a specific satlite
 
      const  issIcon = L.icon({
               iconUrl: 'sg.png',
-              iconSize:     [50, 32], // size of the icon
+              iconSize:     [30,22], // size of the icon
               iconAnchor:   [25, 16], // point of the icon which will correspond to marker's location
              
           });
@@ -80,21 +84,25 @@ https://api.wheretheiss.at/v1/satellites/25544 // Data of a specific satlite
 
      const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
      //Get lat and log of a specific satlite each refrese will update this two values
-      console.log(api_url)
-      async function getISS() {
+     let firstTime = true;
+     console.log(api_url)
+     async function getISS() {
         const response = await fetch(api_url);
         const data = await response.json();
         const { latitude, longitude } = data;
         marker.setLatLng([ latitude, longitude]);//Changes the marker position to the given point.
         // https://leafletjs.com/reference#marker
-       
-       
+        if (firstTime) {
+            mymap.setView([latitude, longitude],2);
+            firstTime = false;
+          }
         document.getElementById('lat').textContent = latitude.toFixed(2);
         document.getElementById('lon').textContent = longitude.toFixed(2);
         
         //console.log(data);
       }
       getISS()  
+      setInterval(getISS, 1000);
   </script>
      
   </body>
