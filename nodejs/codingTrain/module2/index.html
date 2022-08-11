@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+	2.2 Geolocation Web API - Working with Data and APIs in JavaScript
+	https://www.youtube.com/watch?v=3ls013DBcww&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=10
+   11:00
+	Using the Geolocation API
+   https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API 
+
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Server-side with Node.js </title>
+		 
+		 
+		 
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			canvas {
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>2.1 Selfie application</h1>
+		<script>
+			if('geolocation' in navigator) {
+				 
+			 console.log("geolocation IS  available")
+             navigator.geolocation.getCurrentPosition((position) => {
+		     console.log(position);
+			 const lat = position.coords.latitude;
+             const lon = position.coords.longitude;
+             document.getElementById("latitude").textContent = lat;
+             document.getElementById("longitude").textContent = lon;
+		    });
+
+            } else {
+				console.log("geolocation IS  not availabl")
+            }
+ 
+		</script>
+		  <h1>Data Selfie App</h1>
+		  <p>
+			latitude: <span id="latitude"></span>&deg;<br />
+			longitude: <span id="longitude"></span>&deg;
+		  </p>
+	</body>
+</html>
