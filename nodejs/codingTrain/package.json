@@ -2,7 +2,7 @@
   "name": "codingtrain",
   "version": "1.0.0",
   "description": "2.1 Server-side with Node.js - Working with Data and APIs in JavaScript",
-  "main": "index.js",
+  "main": "indexpost.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +12,7 @@
   "author": "me",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "nedb": "^1.8.0"
   }
 }

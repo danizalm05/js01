@@ -100,7 +100,8 @@ You must hange the execution policy for the default (LocalMachine) scope:
   press: y
   
  -------  scripts   --------
-In json file add to the "scripts":  'start: node <file name>"' "nodemon<file name>"
+In json file add to the "scripts": 
+      'start: node <file name>"' "nodemon<file name>"
 so the item will  look somthing this: 
 
  "scripts": {
@@ -127,3 +128,5 @@ node -v // node version
 3. npm install p5-manager -g # install p5 managger
 4. p5 generate  --bundle "mysketch"# Create basic P5 application
 5. http-server mysketch# running on  http://127.0.0.1:8080
+    # this will run  the index.html.
+	#To run anothe file run http://127.0.0.1:8080/file
