@@ -1,16 +1,16 @@
- // 2.4 Saving to a Database - Working with Data and APIs in JavaScript 
+ // 2.5 Database Query  
  // This is the SERVER    side
 // npm instal  nedb
- //https://www.youtube.com/watch?v=xVYa20DCUv0&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=12
- 
+ //https://www.youtube.com/watch?v=q-lUgFxwjEM
  //To start  run:    'nodemon queryDB.js '
-//https://github.com/CodingTrain/Intro-to-Data-APIs-JS/blob/source/module2/04_saving_to_database/index.js
- 
+// https://github.com/CodingTrain/Intro-to-Data-APIs-JS/tree/source/module2/05_querying_database 
 //NeDB: https://github.com/louischatriot/nedb
 //      https://github.com/louischatriot/nedb#creatingloading-a-database
 //https://expressjs.com/
  //https://expressjs.com/en/guide/routing.html
- //08:20
+ //3:00
+ 
+ // 
 
   
 const express = require("express");
@@ -25,6 +25,7 @@ const database = new Datastore("database.db");
 database.loadDatabase();
 
 app.get("/api", (request, response) => {
+  //find is the 'query'  opreation. 'find({}...' means find all object
   database.find({}, (err, data) => {
     if (err) {
       response.end();
