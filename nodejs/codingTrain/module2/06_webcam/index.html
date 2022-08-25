@@ -5,14 +5,14 @@
  // This is the SERVER    side
 // npm instal  nedb
  //https://www.youtube.com/watch?v=9Rhsb3GU2Iw&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=14
- //To start  run:    'nodemon queryDB.js '
+ //To start  run:    'nodemon webCamDB.js '
 // https://github.com/CodingTrain/Intro-to-Data-APIs-JS/tree/source/module2/06_webcam
 
 //NeDB: https://github.com/louischatriot/nedb
 //      https://github.com/louischatriot/nedb#creatingloading-a-database
 //https://expressjs.com/
  //https://expressjs.com/en/guide/routing.html
- // 
+ // 4:00
 
 
 
@@ -41,7 +41,7 @@
       function setup() {
         noCanvas();
         const video = createCapture(VIDEO);
-        video.size(160, 120);
+        video.size(260, 220);
         let lat, lon;
         const button = document.getElementById("submit");
         button.addEventListener("click", async (event) => {
