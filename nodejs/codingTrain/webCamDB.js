@@ -2,7 +2,8 @@
  // This is the SERVER    side
 // npm instal  nedb
  //https://www.youtube.com/watch?v=9Rhsb3GU2Iw&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=14
- //To start  run:    'nodemon webCamDB.js '
+ https://www.youtube.com/watch?v=1mnpn6q25FI&list=PLRqwX-V7Uu6YxDKpFzf_2D84p0cyk4T7X&index=17
+ //To start  run:    'nodemon webCamDB.js'
 // https://github.com/CodingTrain/Intro-to-Data-APIs-JS/tree/source/module2/06_webcam
 
 //NeDB: https://github.com/louischatriot/nedb
