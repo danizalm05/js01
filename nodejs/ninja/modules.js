@@ -13,7 +13,8 @@ const { peo, ages } = require('./people');
 
 console.log(peo, ages);
 
-//const os = require('os');
+const os = require('os');
 
-//console.log(os.platform(), os.homedir());
+console.log(os.platform(),'------' ,os.homedir(),'----');
  
+console.log(os)
