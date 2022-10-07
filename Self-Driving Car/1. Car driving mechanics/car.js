@@ -78,9 +78,9 @@ class Car{
          );
 
          ctx.rect(
-            -this.width/2,
+            -this.width/2+5,
             -this.height/4-4,
-            this.width-2,
+            this.width-10,
             this.height  
          );
 
