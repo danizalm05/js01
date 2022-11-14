@@ -19,9 +19,14 @@
    2. Command line utility to install Node.js packages, do 
    version management and dependency management of Node.js packages.
 
-   
  
- npm install: Install the modules of the cutrent file.
+
+ npm init:  Generate 'package.json' 
+ 
+ npm install: Install the modules of the cutrent file.  (If a project has a package.json file )
+    it will install everything the project needs, in the '/node_modules' folder, creating it if it's not existing already.
+ you can delete the   '/node_modules' folder before 'git'
+ 
  
  npm install <Module Name>: Installing Modules  localy
  npm i <Module Name>: Installing Modules  localy
@@ -89,7 +94,7 @@ And  create/change :
 ------------------------------		
  If you run  nodemon in terminal the 'index.js' is loaded and excuted whenever you 
  change the file
- In caseof  an Error massage '... running scripts is disabled on this system'
+ In case of  an Error massage '... running scripts is disabled on this system'
  
 You must hange the execution policy for the default (LocalMachine) scope:
 1. open the Windows PowerShell in Administration Mode
@@ -118,7 +123,7 @@ so the item will  look somthing this:
 --------   Workflow: Node     ------------------
 
 https://www.youtube.com/watch?v=FjWbUK2HdCo&list=PLRqwX-V7Uu6Zu_uqEA6NqhLzKLACwU74X  
-6:10
+ 
    how I use node.js and global packages (to generate p5 sketches, 
    run a web server)  as part of my workflow.
 node -v // node version  

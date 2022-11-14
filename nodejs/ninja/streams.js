@@ -1,6 +1,6 @@
 //https://www.youtube.com/watch?v=OIBIXYLJjsI&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=4
 //https://github.com/iamshaunjp/node-crash-course/blob/lesson-2/streams.js 
-//32:00
+//32:00  42:00
 
 // Streams = Using data, before it has finished loading
 
