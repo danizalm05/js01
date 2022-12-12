@@ -21,11 +21,14 @@
 
  
 
- npm init:  Generate 'package.json' 
+ 1. npm init:  Generate 'package.json' 
  
- npm install: Install the modules of the cutrent file.  (If a project has a package.json file )
-    it will install everything the project needs, in the '/node_modules' folder, creating it if it's not existing already.
- you can delete the   '/node_modules' folder before 'git'
+ 2. npm install: Install the modules of the cutrent file.  (If a 
+          project has a package.json file )
+    it will install everything the project needs, in the  
+	'/node_modules' folder, creating it if it's not existing 
+	already.
+     you can delete the   '/node_modules' folder before 'git'
  
  
  npm install <Module Name>: Installing Modules  localy
