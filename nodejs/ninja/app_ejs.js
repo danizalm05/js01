@@ -1,9 +1,9 @@
-//Tutorial #6 - Express Apps
+//Tutorial #7 - ejs view engine
 
 
 //https://www.youtube.com/watch?v=Lr9WUkeYSA8&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=6//https://github.com/iamshaunjp/node-crash-course/tree/lesson-3
-//https://github.com/iamshaunjp/node-crash-course/tree/lesson-6
-//https://github.com/iamshaunjp/node-crash-course/blob/lesson-6/app.js
+//https://www.youtube.com/watch?v=yXEesONd_54&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=7
+//https://github.com/iamshaunjp/node-crash-course/blob/lesson-7/app.js
 
 //https://www.npmjs.com/package/express
 //https://www.npmjs.com/
@@ -11,7 +11,10 @@
  //Installation is done using the npm install command:
 
 // $ npm install express
-//11:30
+// $ npm install ejs
+// 1:10
+
+
 const express = require('express');
 // express app
 const app = express();
