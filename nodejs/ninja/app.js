@@ -1,17 +1,19 @@
 //Tutorial #6 - Express Apps
 
 
-//https://www.youtube.com/watch?v=Lr9WUkeYSA8&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=6//https://github.com/iamshaunjp/node-crash-course/tree/lesson-3
+//https://www.youtube.com/watch?v=Lr9WUkeYSA8&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=6
+//https://github.com/iamshaunjp/node-crash-course/tree/lesson-3
 //https://github.com/iamshaunjp/node-crash-course/tree/lesson-6
 //https://github.com/iamshaunjp/node-crash-course/blob/lesson-6/app.js
+
+https://www.youtube.com/watch?v=yXEesONd_54&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=8
 
 //https://www.npmjs.com/package/express
 //https://www.npmjs.com/
  
  //Installation is done using the npm install command:
-
-// $ npm install express
-//11:30
+ // $ npm install express
+ //15:00
 const express = require('express');
 // express app
 const app = express();
@@ -27,10 +29,8 @@ function outPut(res, str){
 }
 
 
-
-
 app.get('/',  (req, res) => {
-    outPut(res,'<p>home123 page</p>')//send a string
+    outPut(res,'<p>home123 page</p>')//Local function to send a string
     
     // This is the method of the 'express'
     //res.sendFile('./views/index.html', { root: __dirname });
@@ -56,7 +56,7 @@ app.get('/about-us', (req, res) => {
 
 
 // 404 page
-//The next function is use only if no other above functions is used
+//The next 'use' function is use only if no other above functions is used
 app.use((req, res) => {
   res.status(404).sendFile('./views/404.html', { root: __dirname });
 });

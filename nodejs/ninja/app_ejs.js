@@ -1,10 +1,9 @@
 //Tutorial #7 - ejs view engine
-
-
-//https://www.youtube.com/watch?v=Lr9WUkeYSA8&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=6//https://github.com/iamshaunjp/node-crash-course/tree/lesson-3
+ //5:30
+ 
 //https://www.youtube.com/watch?v=yXEesONd_54&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=7
 //https://github.com/iamshaunjp/node-crash-course/blob/lesson-7/app.js
-
+//https://github.com/iamshaunjp/node-crash-course/tree/lesson-7
 //https://www.npmjs.com/package/express
 //https://www.npmjs.com/
  
@@ -18,9 +17,14 @@
 const express = require('express');
 // express app
 const app = express();
+// register view engine
 
+app.set('view engine', 'ejs');//use default dir for html files
+// app.set('views', 'myviews');
 // listen for requests
 app.listen(3000);
+
+
 
 //---------------------------------------
 
@@ -33,10 +37,11 @@ function outPut(res, str){
 
 
 app.get('/',  (req, res) => {
-    outPut(res,'<p>home123 page</p>')//send a string
+   
+    //outPut(res,'<p>home page</p>')//send a string
     
     // This is the method of the 'express'
-    //res.sendFile('./views/index.html', { root: __dirname });
+    res.sendFile('./views/index.html', { root: __dirname });
   });
  
   
