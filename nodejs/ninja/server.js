@@ -18,14 +18,15 @@ const fs = require('fs');
 const _ = require('lodash'); //need to run 'npm i   lodash'
 
 function outPut(res, data ) {
-  const num = _.random(0, 20);
+  const num = _.random(0, 20);//Get a random number using  'lodash'
   console.log(num);
-
+ 
+  //'_.once':  run a function only once 
   const greet = _.once(() => {
     console.log('hello');
   });
   greet();
-  greet(); 
+  greet(); //This one will not work
   res.setHeader('Content-Type', 'text/html');
   res.write(data);
   res.end(" ------");
