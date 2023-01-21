@@ -8,6 +8,7 @@
 //https://www.npmjs.com/
 //https://www.npmjs.com/package/nodemon
 //https://www.npmjs.com/package/lodash
+// https://lodash.com/docs/4.17.15
 // https://lodash.com/
 //$ npm i   lodash
  //8:20
@@ -15,7 +16,7 @@
 
 const http = require('http');
 const fs = require('fs');
-const _ = require('lodash'); //need to run 'npm i   lodash'
+const _ = require('lodash'); //need to run: 'npm i lodash'
 
 function outPut(res, data ) {
   const num = _.random(0, 20);//Get a random number using  'lodash'
