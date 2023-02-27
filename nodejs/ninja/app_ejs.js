@@ -1,5 +1,5 @@
 //Tutorial #7 - ejs view engine
- //5:30
+ //27:00
  
 //https://www.youtube.com/watch?v=yXEesONd_54&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=7
 //https://github.com/iamshaunjp/node-crash-course/blob/lesson-7/app.js
@@ -11,18 +11,20 @@
 
 // $ npm install express
 // $ npm install ejs
-// 1:10
+ 
 
 
 const express = require('express');
 // express app
 const app = express();
-// register view engine
 
-app.set('view engine', 'ejs');//use default dir for html files
-// app.set('views', 'myviews');
-// listen for requests
-app.listen(3000);
+// register the view engine "ejs"
+app.set('view engine', 'ejs');//default 'views' 
+//app.set('views', 'myviews');//Change  the default 'views' directory 
+
+
+
+app.listen(3000); // listen for requests
 
 
 
@@ -32,39 +34,35 @@ function outPut(res, str){
     res.send(str);
 
 }
-
-
+  
+ 
 
 
 app.get('/',  (req, res) => {
    
-    //outPut(res,'<p>home page</p>')//send a string
-    
-    // This is the method of the 'express'
-    res.sendFile('./views/index.html', { root: __dirname });
+  const blogs = [
+    {title: 'Yoshi finds eggs', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+    {title: 'Mario finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+    {title: 'How to defeat bowser', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+  ];
+   res.render('index.ejs'  , { title: ' - index' ,blogs });
   });
  
   
 app.get('/about', (req, res) => {
-    //outPut(res,'<p>about page</p>')
-    // res.send('<p>about page</p>');//send a string
-    current_dir = {root: __dirname}
-    res.sendFile('./views/about.html', current_dir  );
-  });
-
-  // redirects /about-us to /about
-app.get('/about-us', (req, res) => {
-  res.redirect('/about');
+   res.render('about.ejs' , { title: ' - about' });//title property = '- about'
 });
+ 
 
-// redirects
-app.get('/about-us', (req, res) => {
-  res.redirect('/about');
-});
+app.get('/blogs/create', (req, res) => {
+  res.render('create',  { title: ' - create' } );
+}); 
 
 
 // 404 page
 //The next function is use only if no other above functions is used
+
 app.use((req, res) => {
-  res.status(404).sendFile('./views/404.html', { root: __dirname });
+  res.status(404).render('404', { title: ' - 404' });
 });
+ 

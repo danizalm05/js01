@@ -20,7 +20,8 @@
    version management and dependency management of Node.js packages.
 
  
-
+  How to prepare  the working  directory
+  ------------------------------------------
  1. npm init:  Generate 'package.json' 
  
  2. npm install: Install the modules of the cutrent file.  (If a 
