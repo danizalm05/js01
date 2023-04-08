@@ -1,14 +1,18 @@
-<!--https://github.com/iamshaunjp/node-crash-course/blob/lesson-4/views/index.html   
+<!--
+ Tutorial #7 - View Engines
+ #7 https://www.youtube.com/watch?v=yXEesONd_54&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=7
+    https://github.com/iamshaunjp/node-crash-course/blob/lesson-7/views/index.ejs
+ 
+Tutorial #8 - Middleware
+ #8 https://www.youtube.com/watch?v=_GJKAs7A0_4&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=8 
+  
 
-https://github.com/iamshaunjp/node-crash-course/blob/lesson-7/views/index.ejs
+
+
 
 -->
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Node.js Crash Course <%= title%></title>
-</head>
+  <%- include('./partials/head.ejs')  %> 
  <!--https://github.com/iamshaunjp/node-crash-course/blob/lesson-7/views/partials/nav.ejs   -->
 
 <body>
@@ -31,6 +35,6 @@ https://github.com/iamshaunjp/node-crash-course/blob/lesson-7/views/index.ejs
           <% }  %>
       </div>
 
-
+      <%- include('./partials/footer.ejs')  %> 
 </body>
 </html>

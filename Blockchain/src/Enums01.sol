@@ -1,0 +1,41 @@
+pragma solidity ^0.5.1;
+  //https://www.dappuniversity.com/articles/solidity-tutorial
+contract Enums01 {
+    
+    enum State { Waiting, Ready, Active }
+    State public state;
+    
+    Person[] public people;
+	//To find data of a person wite the index number in the
+    //	pepole  field and press the people button:
+    // to add a person write "first name","last name" near
+	// "addPerson" button and press "addPerson" button
+	uint256 public peopleCount;
+
+    struct Person {
+        string _firstName;
+        string _lastName;
+    }
+    
+
+    function addPerson(string memory _firstName, string memory _lastName) public {
+        people.push(Person(_firstName, _lastName));
+        peopleCount += 1;
+    }
+
+
+    constructor() public {
+        state = State.Waiting;
+    }
+
+
+    function activate() public {
+           state = State.Active;
+      } 
+   
+   
+   
+    function isActive() public view returns(bool) {
+        return state == State.Active;
+    }
+ }

@@ -1,0 +1,41 @@
+
+https://docs.soliditylang.org/en/develop/
+https://www.tutorialspoint.com/solidity/solidity_basic_syntax.htm
+https://remix.ethereum.org/
+
+
+
+1:   32:40
+  Solidity Tutorial - A Full Course on Ethereum,
+    Blockchain Development, Smart Contracts, and the EVM
+
+https://www.youtube.com/watch?v=ipwxYa-F1uY
+https://www.dappuniversity.com/articles/solidity-tutorial
+
+
+
+2:
+Learn Blockchain, Solidity, and Full Stack Web3 Development with 
+ JavaScript 
+ 
+ 
+ https://www.youtube.com/watch?v=gyMwXuJrbJQ
+ https://github.com/smartcontractkit/full-blockchain-solidity-course-js
+ https://remix.ethereum.org/
+
+
+ 25:15
+ 
+Blockchain: highly secure and reliable network that 
+ records data in a distributed ledger that is not controlled by 
+ a central authority.
+ 
+ Smart contract:  a tamper-proof program that runs on a blockchain 
+ network when certain predefined conditions are satisfied.
+ 
+ Hybrid smart contracts: combine code running on the blockchain 
+ (on-chain) with data and computation from outside the 
+ blockchain (off-chain) provided by decentralized oracle networks.
+
+blockchain oracle:  any device or entity that connects 
+ a deterministic blockchain with off-chain data.

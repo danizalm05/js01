@@ -1,26 +1,22 @@
-<!--https://github.com/iamshaunjp/node-crash-course/blob/lesson-7/views/create.ejs    -->
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create  ejs</title>
-</head>
+<!--
+ Tutorial #7 - View Engines
+ #7 https://www.youtube.com/watch?v=yXEesONd_54&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=7
+    https://github.com/iamshaunjp/node-crash-course/blob/lesson-7/views/index.ejs
+ 
+Tutorial #8 - Middleware
+ #8 https://www.youtube.com/watch?v=_GJKAs7A0_4&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU&index=8 
+  
+
+  https://github.com/iamshaunjp/node-crash-course/blob/lesson-7/views/create.ejs    -->
+
+
+  <html lang="en">
+  <%- include('./partials/head.ejs')  %>  
  <!--   -->
 
 <body>
-    <nav>
-        <div class="site-title">
-          <a href="/"><h1>Blog Ninja</h1></a>
-          <p>A Net Ninja Site</p>
-        </div>
-        <ul>
-          <li><a href="/">Blogs</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/blogs/create">New Blog</a></li>
-        </ul>
-      </nav>
-
-      
+  <%- include('./partials/nav.ejs')  %>   
+ 
   <div class="create-blog content">
     <form>
       <label for="title">Blog title:</label>
@@ -32,5 +28,6 @@
       <button>Submit</button>
     </form>
   </div>
+  <%- include('./partials/footer.ejs')  %> 
 </body>
 </html>
