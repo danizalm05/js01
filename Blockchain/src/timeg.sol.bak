@@ -1,0 +1,52 @@
+pragma solidity ^0.5.1;
+  //https://www.youtube.com/watch?v=ipwxYa-F1uY
+  //https://www.dappuniversity.com/articles/solidity-tutorial
+  //39:00 
+
+pragma solidity ^0.5.1;
+  //https://www.dappuniversity.com/articles/solidity-tutorial
+ 
+
+contract MyContract {
+    uint256 public peopleCount = 0;
+
+    mapping(uint => Person) public people;
+    address owner; //store the owner of this smart contract
+    
+
+    //a modifier that checks if the person calling 
+    //the function is the owner:
+    modifier onlyOwner() {
+       require(msg.sender == owner);//Isthe account calling the function is the owner?
+       _;
+    }
+    
+    
+    
+    struct Person {
+        uint _id;
+        string _firstName;
+        string _lastName;
+    }
+    
+    constructor() public {
+        owner = msg.sender;//withe out this command you 
+        //are not the the owner and 'addPerson' won't run 
+    }
+   
+    //only the owner can run this function
+    function addPerson( 
+            string memory _firstName,  
+            string memory _lastName) 
+            public  onlyOwner
+     {
+        incrementCount();
+        people[peopleCount] = Person(peopleCount, _firstName, _lastName);
+     }
+   
+   
+   
+    function incrementCount() internal {
+        peopleCount += 1;
+     }
+}
