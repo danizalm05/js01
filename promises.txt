@@ -1,0 +1,57 @@
+
+JavaScript Callbacks, Promises, and Async / Await Explained
+--------------------------------------
+ 
+Promises are the foundation of asynchronous programming in modern JavaScript.
+Promise: An object returned by an asynchronous function, which represents the current state of the operation.
+When a promise is returned to the caller, the operation often isn't finished, but the promise object provides methods to handle the eventual success or failure of the operation. 
+ 
+A promise can be in one of three states:
+
+1.pending: the promise has been created, and the asynchronous function it's associated with has not succeeded or failed yet. This is the state your promise is in when it's returned from a call to fetch(), and the request is still being made.
+
+2.fulfilled: the asynchronous function has succeeded. When a promise is fulfilled, its then() handler is called.
+
+3.rejected: the asynchronous function has failed. When a promise is rejected, its catch() handler is called.
+ 
+
+Promise.all(): takes an array of promises and returns a single promise.
+When, you need all the promises to be fulfilled, but they don't depend on each other.
+  
+
+The promise returned by Promise.all() is:
+
+1.fulfilled when and if all the promises in the array are fulfilled. In this case, the then() handler is called with an array of all the responses, in the same order that the promises were passed into all().
+
+2.rejected when and if any of the promises in the array are rejected. In this case, the catch() handler is called with the error thrown by the promise that rejected.
+
+
+
+  async / await
+----------------------------
+
+The async keyword gives you a simpler way to work with asynchronous promise-based code. Adding async at the start of a function makes it an async function 
+Inside an async function, you can use the await keyword before a call to a function that returns a promise. This makes the code wait at that point until the promise is settled, at which point the fulfilled value of the promise is treated as a return value, or the rejected value is thrown. 
+
+async function go() {
+    const cats = await getCats() // Wait until getCats is completed 
+    console.log(cats)
+}
+
+
+go()
+
+-----------------------------
+async function go() {    
+    const [cats,dogs,birds] = await Promise.all(  [getCats(), getDogs(), getBirds()]   )  
+    const allAnimals = cats.concat(dogs,birds)
+    console.log(allAnimals) 
+    const sortAnimal = await superSecretOrder(allAnimals )  
+     console.log(sortAnimal) 
+}
+
+go()
+
+ 
+
+

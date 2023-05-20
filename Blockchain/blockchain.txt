@@ -5,26 +5,12 @@ https://remix.ethereum.org/
 
 
 
-1:   45
-  Solidity Tutorial - A Full Course on Ethereum,
-    Blockchain Development, Smart Contracts, and the EVM
+1:     
 
-https://www.youtube.com/watch?v=ipwxYa-F1uY
-https://www.dappuniversity.com/articles/solidity-tutorial
+Build Your First Blockchain App - Ethereum Todo List 2019
+https://www.youtube.com/watch?v=rzvk2kdjr2I&list=PLS5SEs8ZftgUNcUVXtn2KXiE1Ui9B5UrY&index=40
 
-
-
-2:
-Learn Blockchain, Solidity, and Full Stack Web3 Development with 
- JavaScript 
- 
- 
- https://www.youtube.com/watch?v=gyMwXuJrbJQ
- https://github.com/smartcontractkit/full-blockchain-solidity-course-js
- https://remix.ethereum.org/
-
-
- 25:15
+ ------------------------------
  
 Blockchain: highly secure and reliable network that 
  records data in a distributed ledger that is not controlled by 
@@ -39,3 +25,48 @@ Blockchain: highly secure and reliable network that
 
 blockchain oracle:  any device or entity that connects 
  a deterministic blockchain with off-chain data.
+ 
+ 
+ // Solidity varibles type
+//============================
+1. state varibles = values which are permanently stored in contract storage. 
+ Declared inside contract scope and outside function scope. 
+
+2. local varibles = 
+3. global varile =
+
+'msg' is a global varile in sollidity
+=========================================
+  1. msg.sender  the   addres of the caller in the 'ethereum'
+  2. msg.data — The complete calldata which is a non-modifiable, non-persistent area where     function arguments are stored and behave mostly like memory
+  3. msg.gas — Returns the available gas remaining for a current transaction (you can learn more about gas in Ethereum here)
+  4. msg.sig — The first four bytes of the calldata for a function that specifies the function to be called (i.e., it’s function identifier)
+  5. msg.value — The amount of wei sent with a message to a contract (wei is a
+  denomination of ETH)
+ 
+  Modifiers:  Changes the behaviour of the function to which it is attached.
+  ----------------------
+  1.View modifier: a contract is going to read from storage, but not write to is. 
+  
+  2.Pure modifier: a contract is not going to read or write from contract state, and everything you do only works with memory variables.
+  
+  3.Payable modifier: ensures that the function can send and receive Ether. It can process transactions with non-zero Ether values and rejects any transactions with a zero Ether value.
+   
+  
+  types of memory in Solidity  
+  ------------------------
+  1. Storage: Data put to storage will be saved in the Ethereum network and will be opened for access by other users.  The maximum size of the data unit called is 256 bit. And the minimum is 8 bit.
+
+    Accessing storage memory type is extremely expensive  
+  
+  2. Memory:  Gets a fresh instance on any new message call.         
+  For example: a local variable in contract function that is only needed  inside this function. After the function is finished data will be cleared. 
+
+ 
+  
+  
+  3. Stack: All computations are happening in a data structure called a stack. The stack consists of words of 256 bit each and has a maximum size of 1024 elements. Access to the stack is limited to the top end  
+  
+  
+enum: data structure in solidity that contains selection of option that never changes
+       example:     enum Statuses {  Vacant, Occupied }

@@ -1,0 +1,13 @@
+{
+  "name": "treves",
+  "version": "1.0.0",
+  "description": "This is a simple image generator built with Node.js and Express that uses [OpenAI's Dall-E models](https://beta.openai.com/docs/guides/images) to generate images.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+ },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
