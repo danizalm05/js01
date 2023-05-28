@@ -11,7 +11,7 @@ https://www.youtube.com/watch?v=rzvk2kdjr2I&list=PLS5SEs8ZftgUNcUVXtn2KXiE1Ui9B5
 https://github.com/dappuniversity/eth-todo-list
 https://www.dappuniversity.com/articles/blockchain-app-tutorial
 
-40:10
+43:00
 Table of Contents:
 0. Install Dependencies [6:34]
 1. Project Setup [9:26]  
@@ -169,5 +169,5 @@ to model a task in solidity.
              src/index.html
              src/app.js
        copy the content from git hub
-   11. From a new tab start the server:
+   11. From a new tab go to the project directory and start the server:
         npm run dev          
