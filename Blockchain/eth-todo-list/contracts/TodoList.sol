@@ -4,14 +4,17 @@ pragma solidity ^0.5.0;
 
 contract TodoList {
   uint public taskCount = 0;//state varibles
-
+  //A  definition of a  model of 'Task' for our todo list.(this not represent an instance of a Task)
   struct Task {
     uint id;
     string content;
     bool completed;
   }
+    //mapping is similler to hash table (Key, vlaue) pair
+  //key is 'uint' which points to the 'struct Task '
+  mapping(uint => Task) public tasks; //'tasks' is a state varibles 
 
-  mapping(uint => Task) public tasks;
+  //state varibles  = values which are permanently stored in contract storage.
 
   event TaskCreated(
     uint id,
@@ -24,12 +27,16 @@ contract TodoList {
     bool completed
   );
 
+
+// constructor  run only once, whenever the contract is initialized, i.e., deployed to the blockchain
   constructor() public {
     createTask("Check out dappuniversity.com");
   }
 
   function createTask(string memory _content) public {
+    
     taskCount ++;
+    //reference to the mapping 'mapping(uint => Task) public tasks.
     tasks[taskCount] = Task(taskCount, _content, false);
     emit TaskCreated(taskCount, _content, false);
   }

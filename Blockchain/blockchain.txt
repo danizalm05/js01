@@ -38,7 +38,8 @@ blockchain oracle:  any device or entity that connects
 'msg' is a global varile in sollidity
 =========================================
   1. msg.sender  the   addres of the caller in the 'ethereum'
-  2. msg.data — The complete calldata which is a non-modifiable, non-persistent area where     function arguments are stored and behave mostly like memory
+  2. msg.data — The complete calldata which is a non-modifiable, non-persistent area where
+       function arguments are stored and behave mostly like memory
   3. msg.gas — Returns the available gas remaining for a current transaction (you can learn more about gas in Ethereum here)
   4. msg.sig — The first four bytes of the calldata for a function that specifies the function to be called (i.e., it’s function identifier)
   5. msg.value — The amount of wei sent with a message to a contract (wei is a
@@ -48,19 +49,23 @@ blockchain oracle:  any device or entity that connects
   ----------------------
   1.View modifier: a contract is going to read from storage, but not write to is. 
   
-  2.Pure modifier: a contract is not going to read or write from contract state, and everything you do only works with memory variables.
+  2.Pure modifier: a contract is not going to read or write from contract state, 
+  and everything you do only works with memory variables.
   
   3.Payable modifier: ensures that the function can send and receive Ether. It can process transactions with non-zero Ether values and rejects any transactions with a zero Ether value.
    
   
   types of memory in Solidity  
   ------------------------
-  1. Storage: Data put to storage will be saved in the Ethereum network and will be opened for access by other users.  The maximum size of the data unit called is 256 bit. And the minimum is 8 bit.
+  1. Storage: Data put to storage will be saved in the Ethereum network and will be opened for
+   access by other users.  The maximum size of the data unit called is 256 bit. 
+   And the minimum is 8 bit.
 
     Accessing storage memory type is extremely expensive  
   
   2. Memory:  Gets a fresh instance on any new message call.         
-  For example: a local variable in contract function that is only needed  inside this function. After the function is finished data will be cleared. 
+  For example: a local variable in contract function that is only needed  inside this function.
+   After the function is finished data will be cleared. 
 
  
   
