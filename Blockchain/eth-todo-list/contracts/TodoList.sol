@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 //https://www.youtube.com/watch?v=rzvk2kdjr2I&list=PLS5SEs8ZftgUNcUVXtn2KXiE1Ui9B5UrY&index=41
 //https://github.com/dappuniversity/eth-todo-list/blob/master/contracts/TodoList.sol
-
+ 
 contract TodoList {
   uint public taskCount = 0;//state varibles
   //A  definition of a  model of 'Task' for our todo list.(this not represent an instance of a Task)

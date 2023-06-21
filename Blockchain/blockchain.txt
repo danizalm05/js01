@@ -4,17 +4,20 @@ https://www.tutorialspoint.com/solidity/solidity_basic_syntax.htm
 https://remix.ethereum.org/
 
 
-
-1:     
-
-Build Your First Blockchain App - Ethereum Todo List 2019
-https://www.youtube.com/watch?v=rzvk2kdjr2I&list=PLS5SEs8ZftgUNcUVXtn2KXiE1Ui9B5UrY&index=40
-
+------------------------------------------------------------
+  Solidity, Blockchain, and Smart Contract Course – Beginner 
+to Expert Python Tutorial
+freeCodeCamp.org
+    
+ https://www.youtube.com/watch?v=M576WGiDBdQ      34:00
  ------------------------------
  
-Blockchain: highly secure and reliable network that 
- records data in a distributed ledger that is not controlled by 
+  
+A blockchain is a distributed database or ledger shared among
+ a computer network's nodes, that is not controlled by 
  a central authority.
+
+
  
  Smart contract:  a tamper-proof program that runs on a blockchain 
  network when certain predefined conditions are satisfied.
@@ -27,13 +30,13 @@ blockchain oracle:  any device or entity that connects
  a deterministic blockchain with off-chain data.
  
  
- // Solidity varibles type
-//============================
-1. state varibles = values which are permanently stored in contract storage. 
+Solidity varibles type
+============================
+1.  state varibles = values which are permanently stored in contract storage. 
  Declared inside contract scope and outside function scope. 
 
-2. local varibles = 
-3. global varile =
+2.  local varibles = 
+3.  global varile =
 
 'msg' is a global varile in sollidity
 =========================================
@@ -45,7 +48,9 @@ blockchain oracle:  any device or entity that connects
   5. msg.value — The amount of wei sent with a message to a contract (wei is a
   denomination of ETH)
  
-  Modifiers:  Changes the behaviour of the function to which it is attached.
+ 
+  Modifiers:  Changes the behaviour of the function to which it 
+         is attached.
   ----------------------
   1.View modifier: a contract is going to read from storage, but not write to is. 
   
@@ -75,3 +80,22 @@ blockchain oracle:  any device or entity that connects
   
 enum: data structure in solidity that contains selection of option that never changes
        example:     enum Statuses {  Vacant, Occupied }
+	   
+	   
+	   
+Add metamask: An Ethereum Wallet in your Browser 
+ https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/
+  1. From the extension create a new wallet.
+             retire  runway   memory  club 
+			 robot   boil     reveal  owner
+             nut     kick     almost  cactus
+  2. Browse to: Rinkeby Autheticated Faucet
+    A test net Ethereum-based tool allowing users to request test ETH in 
+	exchange for making a social  media post. 
+       https://www.alchemy.com/dapps/rinkeby-faucet
+	   https://rinkebyfaucet.io/
+	   
+	Faucer is an application that gives us free test tokens.   
+	   
+ How to get your Rinkeby ETH for Ethereum development and testing.	   
+ 
