@@ -1,8 +1,8 @@
 
-JavaScript Callbacks, Promises, and Async / Await Explained
+JavaScript Callbacks,  Promises, and Async / Await Explained
 --------------------------------------
  
-Promises are the foundation of asynchronous programming in modern JavaScript.
+Promises are the  foundation of asynchronous programming in modern JavaScript.
 Promise: An object returned by an asynchronous function, which represents the current state of the operation.
 When a promise is returned to the caller, the operation often isn't finished, but the promise object provides methods to handle the eventual success or failure of the operation. 
  
