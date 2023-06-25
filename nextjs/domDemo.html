@@ -1,0 +1,28 @@
+<!-- 
+Updating the UI with JavaScript and DOM Methods
+
+https://nextjs.org/learn/foundations/from-javascript-to-react/updating-ui-with-javascript
+
+
+-->
+<html>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/javascript">
+      
+       const app = document.getElementById('app');  
+       const header = document.createElement('h1');   // Create a new H1 element
+       const headerContent = document.createTextNode(
+                       'Develop. Preview. Ship. 🚀',
+             );
+       header.appendChild(headerContent);
+       app.appendChild(header); 
+    </script>
+  </body>
+</html>
+
+
+
+
+  
