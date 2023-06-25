@@ -18,6 +18,8 @@ Declarative programming is like ordering a pizza without being concerned about t
 
 A popular declarative library that helps developers build user interfaces is React.
 
+
+
 Three core concepts of React 
     https://nextjs.org/learn/foundations/from-javascript-to-react/building-ui-with-components
     Components= From JavaScript to React
