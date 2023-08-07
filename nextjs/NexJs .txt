@@ -1,0 +1,69 @@
+ Next.js Tutorial - Codevolution
+https://www.youtube.com/watch?v=RY6B7JSBRRg&list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH&index=2
+
+ 
+https://github.com/gopinav/Next-JS-Tutorials/tree/master/hello-world
+https://nextjs.org/docs
+ 
+
+React =  A JavaScript library for building interactive user interfaces.
+Next.js =  A flexible React framework for building blocks to create  web applications.
+ 
+ https://nextjs.org/docs/getting-started/installation
+ Create 
+ 1.  From terminal run: 
+              npx create-next-app@latest
+      Sometimes you need to run this a few times
+ 2.  Go to the directory of the project and run :npm run dev 
+	 From your browser goto http://localhost:3000/
+ 3.  Get started by editing  app/page.tsx.  This file represents the route
+ 
+================
+ To create a route for the root URL (localhost:3000), follow these steps:
+
+    a. Create a /app folder.
+    b. Inside the app folder, create a page.tsx file. This file represents the route.
+    c. Define a simple React component in the page.tsx file, to represent the “Home” page:
+             export default function Home() {
+                    return <h1>Welcome home!</h1>;
+        }
+ 
+
+==============
+  To create dynamic routes, follow these steps:
+
+    1. Create a  app/products folder.
+    2. Create a page.tsx file to display a list of three products:
+
+       export default function ProductList() {
+         return (
+               <>
+                 <h1>Product List</h1>
+                 <h2>Product 1</h2>
+                 <h2>Product 2</h2>
+                 <h2>Product 3</h2>
+               </>
+               );
+        }
+    3. Navigateto localhost:3000/products in the browser, the list of products  
+    4. Within the products folder, create a new folder named [productId].
+	        The square brackets indicate a dynamic route segment. 
+    5. Inside the [productId] folder, create a page.tsx file:
+    6. Now, when you navigate to localhost:3000/products/1, you'll see the product details page. Similarly, accessing /products/2, /products/3, or even /products/100 will display the same details page. [productId] is the dynamic route segment which can accommodate values like 1, 2, 3 and so on.
+	
+                  export default function ProductDetail() {
+                         return <h1>Details about the product</h1>;
+                     }
+    7. To display the specific product ID, you can make use of the params object
+	made  available in each page. Modify the component as follows:
+          export default function ProductDetail({
+                params,
+         }: {
+             params: { productId: string };
+              }) {
+             return <h1>Details about product {params.productId}</h1>;
+            }
+    8. Now, when you navigate to localhost:3000/products/1, the details about product 1 display. Similarly, visiting /products/100 will display details about product 100.
+
+=====================
+ https://www.youtube.com/watch?v=hvYKrqnY8LM&list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH&index=5
