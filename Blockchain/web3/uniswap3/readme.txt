@@ -9,7 +9,7 @@
   Goerli PoW Faucet     miner   https://goerli-faucet.pk910.de/#/
   populer token                 https://www.coingecko.com/
   Goerli Testnet Explorer :     https://goerli.etherscan.io
- 
+  When Ethereum meets React:     https://usedapp.io/
  Install MetaMask extension for firefox.
 
  
@@ -256,3 +256,9 @@ Project running
                         Building the react application
 ------------------------------------------------------------------------------
 https://www.youtube.com/watch?v=Y89q6T1r1Yg       1:10:00
+ https://usedapp.io/  When Ethereum meets React: 
+ https://usedapp-docs.netlify.app/docs/ 
+ Create a new ethereum application
+  npm create eth-app  eth-app  ./
+
+ 
