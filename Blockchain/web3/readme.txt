@@ -1,0 +1,263 @@
+ Build and Deploy a Web 3.0 Cryptocurrency Exchange Decentralized Application
+ 
+ https://www.youtube.com/watch?v=Y89q6T1r1Yg     41:00
+ https://github.com/adrianhajdin/project_web3_uniswap
+ 
+  Uniswap = decentralized crypto exchange that runs on the Ethereum blockchain.
+  Alchemy = web 3.0  devlopment platform.
+  
+  Goerli PoW Faucet     miner   https://goerli-faucet.pk910.de/#/
+  populer token                 https://www.coingecko.com/
+  Goerli Testnet Explorer :     https://goerli.etherscan.io
+  When Ethereum meets React:     https://usedapp.io/
+ Install MetaMask extension for firefox.
+
+ 
+ 1. Install  Cranq-1.16.1 Setup
+ 2. create new project: 'uniswap_clone'
+ 3 Search for uniswap compile. You will get few results 'factory compiler' and 
+  'router compiler'.  drag both of them
+ 4. Serach for  'uniswap deploy'. there two  'factory deployer'  'router deployer'
+  drag both of them.
+  
+  00:12:30 MetaMask Setup
+  Install MetaMask extension for firefox.
+  1. Create a new wallet
+  2. 
+    legend  minimum  dad
+	mimic   soup     borrow 
+	asthma  unaware  split 
+	pulp    explain  kiss
+	
+    goerliETH  address0x03B440027c9dACB15e7a69525b68B9e5d059E62f
+	
+  3. Put this addres in to cranq 
+     goerliETH  address0x03B440027c9dACB15e7a69525b68B9e5d059E62f
+   	
+  4. Alchemy - https://www.alchemy.com/	
+  
+       log in with  dan   Pas chose Ethereum Mainnet network.
+	   
+	   API Key =    g2y-V4lAR6NjM7-7a8rBipTJxRQSVqlf
+       Create new app : https://dashboard.alchemy.com/apps
+	       Name = Uniswap Clone   Chain = Etureum  Network = Geprli
+       
+	 
+	 
+	  https://www.youtube.com/watch?v=Y89q6T1r1Yg    30:10
+	  
+	   
+	  
+	  
+	  19:17 
+	   
+	  Goerli FAUCET Fast and reliable. 0.02 Goerli ETH/day.
+	  -------------------------------------------------------
+	  
+	  how to get goerli faucet?
+	  copy MetaMask address 0x03B440027c9dACB15e7a69525b68B9e5d059E62f
+	  to
+	  Alchemy Faucet - https://goerlifaucet.com/ 
+	  
+	   Goerli Testnet Explorer :https://goerli.etherscan.io
+	   
+	    Put the Transaction Hash to look for details
+	  To receive Goerli ETH, your wallet must have a minimum balance of 0.001 ETH on mainnet. Please add ETH to your wallet and try again. 
+	  
+	  https://ethereum.org/en/get-eth/
+	   Ethereum is a network of computers all over the world that follow a set of rules called the Ethereum protocol. 
+	   ETH is the primary asset of Ethereum.  
+	  
+	  How do I add eth to my wallet?
+	  
+	  Goerli PoW Faucet     miner
+	  https://goerli-faucet.pk910.de/#/
+	  
+	  
+	  https://faucet.quicknode.com/ethereum/goerli  
+	  
+ 
+
+
+
+	  
+ How to import and run
+ -------------------------------------
+ 1. in carnq goto:project/import
+ chose 'checkpoint_one.cranqj' file
+ in 'config node  in the input of this node  '/data input'  put the next values
+  
+	 config data values 
+	  
+	  {
+  "providerUrl": "https://eth-goerli.g.alchemy.com/v2/WuL1a7BWL24YhS97wBToYwAoa-xcRVu8",
+  "privateKey":"e6f977515ef2b44810c7093c5996fd2759f653149d6c8240f80e5fec57b390de",
+  "accountAddress": "0x03B440027c9dACB15e7a69525b68B9e5d059E62f",
+  "network": "goerli"
+}
+
+https://www.nftplaygrounds.com/post/add-goerli-to-metamask-a-step-by-step-guide
+
+
+The output  is :
+@start
+"0xa5DEAF7004Ea7AA517ff98c51e5C9bf6819c9F75"
+ 
+
+ Goto  Goerli Testnet Explorer :https://goerli.etherscan.io and put the above address
+ in the text window and press  search
+ 
+ On the top of the screen you can see the  Contract Creator .If you click it ,you'll
+see  two  diffrent contract  creator at similler times. The first one is the factory  contract the second is the router  contract
+ ------------------------------------------------------------------------
+ 
+ 	 
+ https://www.youtube.com/watch?v=Y89q6T1r1Yg     54:30
+ https://github.com/adrianhajdin/project_web3_uniswap 
+ 
+ `
+ In router contrect prototype node change value to:
+          typeof `router contract` of `liquidities adder`
+		  
+ In CRANQ, whenever you put a string in quotes (" ") in the KEY of an item 
+ getter node, the program fails to run. But if you just type in the name of the key without quotes, the program will run as usual. 
+
+This is just something to look out for, which might also help others who may run into similar problems.
+ 
+ 
+ Create your ERC20 Token
+ -------------------------
+ https://www.smartcontracts.tools/token-generator/create/ethereum/
+ 
+ Token Type = SimpleERC20
+ Token Name =
+ Token Symbol =
+ Initial Supply = 10000000
+ 
+ Network  = Goerli - Testnet
+ click the 'I have read, understood and agreed to Token Generator's Terms of Use. '
+ 
+ click next
+ In metmax click next and connect
+ click skip
+ click create token
+ in metmax click confirm
+ press Add to MetaMask
+ In metamask press add token
+ you can see your new token in MetaMask
+ 
+ 
+ https://www.youtube.com/watch?v=Y89q6T1r1Yg (58:00)
+ 
+ Create a new version of our own token of a populer token.The 'Shiba Inu' Token
+ ------------------------------------------------------
+ https://www.coingecko.com/
+ 1. Goto https://www.smartcontracts.tools/token-generator/create/ethereum/
+ 
+ 
+ we have to use the liquidity pairs to 
+ provide them as  liquidity 
+ ######Token Type = SimpleERC20
+  
+ Token Name = Shiba JSM
+ Token Symbol = SHIB
+ Initial Supply = 10000000
+ Network  = Goerli - Testnet
+ and repeat the steps  of Create your ERC20 Token
+ 
+ 
+ https://www.youtube.com/watch?v=Y89q6T1r1Yg (59:40)  1:04:50
+ What can we do with the new assests
+1. Chose a token (ex JSMG)
+2. "    token details (from the 3 pointes on the  upper  right side)
+3. copy the token contract address: 0xb7D15A159b7Fda677E5cE6E94C57960B422CD417
+4. On Cranq go to 'store node' chose the data input
+  and input the next array:
+      
+  [
+	[
+		{ 
+			"address": "0xb7D15A159b7Fda677E5cE6E94C57960B422CD417",
+			  "desiredAmount": 1000
+		},
+		{
+			"address": "ETH",
+			"desiredAmount": 0.001
+		}
+	],
+	[
+		{ 
+			"address": "0xb7D15A159b7Fda677E5cE6E94C57960B422CD417",
+			  "desiredAmount": 100
+		},
+		{
+			"address": "0x0ACd2633a650D8e37ED49C54037ad5ba5f7135C1",
+			  "desiredAmount": 1000
+		}
+	]
+]
+
+this will exchange alot of JSMG for Eterum
+=============================================================================
+ Import file 'final_checkpoint.cranqj' from 'github'
+ In 'config node  in the input of this node  '/data input'  put the next values
+  
+	 config data values 
+	  
+	  {
+  "providerUrl": "https://eth-goerli.g.alchemy.com/v2/WuL1a7BWL24YhS97wBToYwAoa-xcRVu8",
+  "privateKey":"e6f977515ef2b44810c7093c5996fd2759f653149d6c8240f80e5fec57b390de",
+  "accountAddress": "0x03B440027c9dACB15e7a69525b68B9e5d059E62f",
+  "network": "goerli"
+}
+
+copy the address that appears after '
+added 344 packages in 30s
+Project running' 
+
+"0x4af9eD564aeb13e37282Cc7a5cC4d13AAf017b02" @start.....
+
+and serach it in  'goerli.etherscan.io'
+
+
+
+Starting project...
+Installing dependencies, please wait...
+
+added 344 packages in 30s
+Project running
+"0x4af9eD564aeb13e37282Cc7a5cC4d13AAf017b02" @start
+[
+  [
+    {
+      "address": "0xb7D15A159b7Fda677E5cE6E94C57960B422CD417",
+      "desiredAmount": 1000
+    },
+    {
+      "address": "ETH",
+      "desiredAmount": 0.001
+    }
+  ],
+  [
+    {
+      "address": "0xb7D15A159b7Fda677E5cE6E94C57960B422CD417",
+      "desiredAmount": 100
+    },
+    {
+      "address": "0x0ACd2633a650D8e37ED49C54037ad5ba5f7135C1",
+      "desiredAmount": 1000
+    }
+  ]
+] @start
+
+
+
+
+                        Building the react application
+------------------------------------------------------------------------------
+https://www.youtube.com/watch?v=Y89q6T1r1Yg       1:10:00  1:14:00
+ https://usedapp.io/  When Ethereum meets React: 
+ https://usedapp-docs.netlify.app/docs/ 
+ 1.Create a new ethereum application
+        yarn create eth-app ./    
+  
