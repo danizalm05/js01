@@ -1,0 +1,23 @@
+ 
+ 
+Build and Deploy a Modern Web 3.0 Blockchain App | Solidity, Smart Contracts, Crypto
+ ----------------------------------------------------------
+ https://www.youtube.com/watch?v=Wn_Kb3MR_cU
+ https://github.com/adrianhajdin/project_web3.0
+ # #####
+ 
+ https://web3js.readthedocs.io/en/v1.10.0/
+ https://goerli-faucet.pk910.de/#/
+ https://etherscan.io/accounts 
+ www.infura.io: suite    blockchain APIs and developer tools
+     
+1. Create 2 dir client and smart_contract and move into client
+2. Install vite: npm create vite@latest
+     Project name: » ./
+     Select a framework: react 
+      npm install
+      npm run dev
+3. npm install -D tailwindcss      
+   npx tailwindcss init
+
+   14:40

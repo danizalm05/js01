@@ -1,0 +1,19 @@
+ 
+ 
+ Web3.js Intro · Web3.js ·  Ethereum Blockchain Developer Crash Course 
+ ----------------------------------------------------------
+ #1  www.youtube.com/watch?v=t3wM5903ty0&list=PLS5SEs8ZftgXlCGXNfzKdq7nGBcIaVOdN
+ #2 https://www.youtube.com/watch?v=tu92jcqdn6s
+ #####
+ 
+ https://web3js.readthedocs.io/en/v1.10.0/
+ giyhub
+ 
+ https://www.dappuniversity.com/
+
+ 1. www.infura.io: suite    blockchain APIs and developer tools
+     Press  start inovating sign and get the APIs
+      a2d62c3117a2463e8d8799732b83ab65
+      https://app.infura.io/dashboard/ethereum/a2d62c3117a2463e8d8799732b83ab65/settings/endpoints
+
+ 2. npm install  web3        6:34

@@ -21,7 +21,7 @@ When, you need all the promises to be fulfilled, but they don't depend on each o
 
 The promise returned by Promise.all() is:
 
-1.fulfilled when and if all the promises in the array are fulfilled. In this case, the then() handler is called with an array of all the responses, in the same order that the promises were passed into all().
+1.fulfilled when and if   all   the promises in the array are fulfilled. In this case, the then() handler is called with an array of all the responses, in the same order that the promises were passed into all().
 
 2.rejected when and if any of the promises in the array are rejected. In this case, the catch() handler is called with the error thrown by the promise that rejected.
 
