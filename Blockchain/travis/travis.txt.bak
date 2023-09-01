@@ -1,11 +1,11 @@
  Blockchain Development Tutorial For Developers: Let's Create A Simple Dapp
  
-Travis   Media
+Travis Media
 
  https://www.youtube.com/watch?v=LSL69RGeQL0     
  https://github.com/rodgtr1/blockchain-tutorial-for-devs
  
- 1. mkdir  contract
+ 1. mkdir contract
     cd contract
     npm init -y
 
