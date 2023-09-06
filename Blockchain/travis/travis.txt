@@ -20,21 +20,51 @@ Travis   Media
  4. npx hardhat compile
     Compile the contracts in the /contracts to /artifacts each *.sol will
        have 2 diffrent dir
-      12:00
+      03:30
+ 5. Maybe next 5 commands are not need 
+    npm install --save-dev ethereum-waffle
+    npm install @openzeppelin/contracts -D
+    npm i chai -D
+    npm i mocha -D
+    npx waffle
+
+
+
+
+ 6.   npx hardhat test    # not working
+       Run the test/sample-test.js     
+ 7.    npx hardhat node  //  Display account list
  
- 5.   npx hardhat test  
-       Run the test/sample-test.js     # not working
- 6.    npx hardhat node  //  Display account list
+ 8. In metamask   chose Add a network manually
+   Network name : localhost 8545
+   New RPC URL:  http://localhost:8545
+   Chain ID: 31337
+   Currency symbol:ETH 
+
+ Grab the first private key  from the list  of "npx hardhat node"
+ 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+ In matamask select import account and input the private key
+ 9. In a new  terminal
  
- 
- 9.
- deploy : npx hardhat run ./scripts/deploy.js --network localhost
+ 10.
+ To deploy run : npx hardhat run ./scripts/deploy.js --network localhost
  output:
- Lock with 0.001ETH and unlock timestamp 1693385089 deployed to 
- 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+ 
+ Lock with 0.001ETH and unlock timestamp 1693662541 
+ deployed to 0x5FbDB2315678afecb367f032d93F642f64180aa3
  
  copy the above address
  
- 14:00
-
+ 19:00
+https://www.youtube.com/watch?v=LSL69RGeQL0  
  Creating the front end
+ ------------------------------
+   
+ 
+  
+  
+  1. run: npx hardhat node
+  2. run in another terminal: npx hardhat run ./scripts/deploy.js --network localhost
+  3. cd ..
+  4. npx create-react-app client
+  5. cd client
