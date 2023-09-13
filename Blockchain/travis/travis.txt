@@ -67,4 +67,9 @@ https://www.youtube.com/watch?v=LSL69RGeQL0
   2. run in another terminal: npx hardhat run ./scripts/deploy.js --network localhost
   3. cd ..
   4. npx create-react-app client
-  5. cd client
+  5. cd client 20:06
+  6. In /client/src/App.js
+      erase:   import logo from './logo.svg';...
+
+  7.  In /client/ run:  'npm run start'  and look at localhost:300
+  8. run 'npm install bootstrap'   21:00
