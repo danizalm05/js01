@@ -4,7 +4,14 @@ Travis   Media
 
  https://www.youtube.com/watch?v=LSL69RGeQL0     
  https://github.com/rodgtr1/blockchain-tutorial-for-devs
- 
+
+
+ ethers: compact library for interacting with the Ethereum Blockchain
+ https://docs.ethers.org/v5/
+ https://docs.ethers.org/v6/getting-started/  
+
+
+
  1. mkdir  contract
     cd contract
     npm init -y
@@ -33,7 +40,9 @@ Travis   Media
 
  6.   npx hardhat test    # not working
        Run the test/sample-test.js     
- 7.    npx hardhat node  //  Display account list
+
+ 7.    cd contract
+       npx hardhat node  //  Display  list of 20 accounts
  
  8. In metamask   chose Add a network manually
    Network name : localhost 8545
@@ -44,10 +53,10 @@ Travis   Media
  Grab the first private key  from the list  of "npx hardhat node"
  0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
  In matamask select import account and input the private key
- 9. In a new  terminal
- 
- 10.
- To deploy run : npx hardhat run ./scripts/deploy.js --network localhost
+ 9. Open new  terminal
+    run :
+         cd contract
+          npx hardhat run ./scripts/deploy.js --network localhost
  output:
  
  Lock with 0.001ETH and unlock timestamp 1693662541 
@@ -63,13 +72,33 @@ https://www.youtube.com/watch?v=LSL69RGeQL0
  
   
   
-  1. run: npx hardhat node
-  2. run in another terminal: npx hardhat run ./scripts/deploy.js --network localhost
-  3. cd ..
-  4. npx create-react-app client
-  5. cd client 20:06
-  6. In /client/src/App.js
-      erase:   import logo from './logo.svg';...
-
-  7.  In /client/ run:  'npm run start'  and look at localhost:300
-  8. run 'npm install bootstrap'   21:00
+  1. run:  
+        cd contract
+        npx hardhat node
+  2. run in another terminal: 
+        cd contract
+        npx hardhat run  ./scripts/deploy.js --network localhost
+  3.  cd ..
+      npx create-react-app client  19:24
+  4. cd client 20:06
+  5. In /client/src/App.js
+      erase:   
+          import logo from './logo.svg';
+          import './App.css';
+                
+  6. In /client/ run: - npm run start -  and look at localhost:3000
+  7. run 'npm install bootstrap'   21:00
+ 
+ 
+   -----------------  Ethers  -----------------
+  Provider = read-only connection to = blockchain, which allows querying 
+           the blockchain state
+  Signer = wraps all operations that interact with an account.
+   
+  
+  8. npm install ethers  // docs.ethers.org/v6/getting-started/   32:14
+  9. Add   '   import { ethers } from "ethers"; '    to App.js
+  
+  https://docs.ethers.org/v6/getting-started/ 33:50
+   
+   

@@ -1,29 +1,63 @@
- 
- 
+import React, { useEffect, useState } from 'react';
+import { ethers } from "ethers";
 
 function App() {
-  return(
+  const [depositValue, setDepositValue] = useState(0);
+  const [greet, setGreet] = useState('');
+  const [greetingValue, setGreetingValue] = useState('');
+  const [balance, setBalance] = useState();
+
+
+  const handleDepositChange = (e) => {
+     setDepositValue(e.target.value)
+  }
+
+  const handleGreetingChange = (e) => {
+    setGreetingValue(e.target.value);
+  }
+
+  const handleDepositSubmit = async (e) => {
+    e.preventDefault();
+    console.log(depositValue)
+    //const ethValue = ethers.utils.parseEther(depositValue)
+   // const deposit = await contract.deposit({value: ethValue});
+   // await deposit.wait();
+   // const balance = await provider.getBalance(contractAddress);
+   // setBalance(ethers.utils.formatEther(balance));
+  }
+
+  const handleGreetingSubmit = async (e) => {
+    
+    e.preventDefault();
+    console.log(greetingValue)
+    //await contract.setGreeting(greetingValue)
+    //setGreet(greetingValue);
+   // setGreetingValue('');
+  }
+
+  return (
     <div className="container">
       <div className="row mt-5">
 
         <div className="col">
-            <p>Contract Balance:   ETH</p>
+          <h3>Greeting  </h3>
+          <p>Contract Balance: { 0  } ETH</p>
         </div>
 
         <div className="col">
           <div className="mb-3">
             <h4>Deposit ETH</h4>
-            <form  >
+            <form   onSubmit={handleDepositSubmit}>
               <div className="mb-3">
-                <input type="number" className="form-control" placeholder="0"  value = "test"   />
+                <input type="number" className="form-control" placeholder="0" onChange={handleDepositChange} value={depositValue} />
               </div>
               <button type="submit" className="btn btn-success">Deposit</button>
             </form>
 
             <h4 className="mt-3">Change Greeting</h4>
-            <form  >
+            <form  onSubmit={handleGreetingSubmit}>
               <div className="mb-3">
-                <input type="text" className="form-control" placeholder=""     />
+                <input type="text" className="form-control" placeholder="10" onChange={handleGreetingChange} value={greetingValue} />
               </div>
               <button type="submit" className="btn btn-dark">Change</button>
             </form>
@@ -31,7 +65,7 @@ function App() {
         </div>
       </div>
     </div>
-  );;
+  )
 }
 
 export default App;
