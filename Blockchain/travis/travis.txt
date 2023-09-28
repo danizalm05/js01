@@ -2,9 +2,9 @@
  
 Travis   Media
 
- https://www.youtube.com/watch?v=LSL69RGeQL0     
- https://github.com/rodgtr1/blockchain-tutorial-for-devs
-
+  www.youtube.com/watch?v=LSL69RGeQL0     
+  github.com/rodgtr1/blockchain-tutorial-for-devs
+  docs.ethers.org/v6/getting-started/
 
  ethers: compact library for interacting with the Ethereum Blockchain
  https://docs.ethers.org/v5/
@@ -49,13 +49,13 @@ Travis   Media
    New RPC URL:  http://localhost:8545
    Chain ID: 31337
    Currency symbol:ETH 
-
+   change the name to 'hardhead account'
  Grab the first private key  from the list  of "npx hardhat node"
  0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
  In matamask select import account and input the private key
  9. Open new  terminal
     run :
-         cd contract
+         cd ./contract
           npx hardhat run ./scripts/deploy.js --network localhost
  output:
  
@@ -86,7 +86,7 @@ https://www.youtube.com/watch?v=LSL69RGeQL0
           import logo from './logo.svg';
           import './App.css';
                 
-  6. In /client/ run: - npm run start -  and look at localhost:3000
+  6. In ./client/ run: - npm run start -  and look at localhost:3000
   7. run 'npm install bootstrap'   21:00
  
  
@@ -97,8 +97,21 @@ https://www.youtube.com/watch?v=LSL69RGeQL0
    
   
   8. npm install ethers  // docs.ethers.org/v6/getting-started/   32:14
-  9. Add   '   import { ethers } from "ethers"; '    to App.js
-  
-  https://docs.ethers.org/v6/getting-started/ 33:50
+  9. Add to App.js
+            import { ethers } from "ethers";
+              
+   https://www.youtube.com/watch?v=LSL69RGeQL0  35:00
+   https://docs.ethers.org/v6/getting-started/
    
-   
+   Strarting the project:
+     a.  In terminal 1 run :
+              cd ./contract
+              npx hardhat node
+     b.  start metamask 
+         connect to hardhead account(localhost 8545)
+         make sure there  is a connection
+     c.  In terminal 2 run:
+              cd ./client 
+              npm run start  
+
+https://www.youtube.com/watch?v=LSL69RGeQL0  36:00              

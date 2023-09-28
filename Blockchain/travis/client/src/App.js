@@ -1,11 +1,37 @@
 import React, { useEffect, useState } from 'react';
 import { ethers } from "ethers";
+   
+
 
 function App() {
   const [depositValue, setDepositValue] = useState(0);
   const [greet, setGreet] = useState('');
   const [greetingValue, setGreetingValue] = useState('');
   const [balance, setBalance] = useState();
+
+  //let signer = null;
+
+ 
+   // v6,   no longer had a .providers puddle. 
+   // Web3Provider has been changed to BrowserProvider.
+   
+  //const provider = new ethers.providers.Web3Provider(window.ethereum)
+   const provider = new ethers.BrowserProvider(window.ethereum)
+   const signer = provider.getSigner()
+      
+  //const contractAddress = 'yourDeployedContractAddressGoesHere';
+  //const ABI = "yourABIGoesHere"
+  //const contract = new ethers.Contract(contractAddress, ABI, signer);  
+
+  useEffect(() => {
+    //const requestAccounts = async () => {
+     const connectWallet = async () => {
+      await provider.send("eth_requestAccounts", []);
+      
+    }
+    connectWallet().catch(console.err)
+  }, [])
+
 
 
   const handleDepositChange = (e) => {
