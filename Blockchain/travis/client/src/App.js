@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ethers } from "ethers";
-   
+//const { ethers } = require("ethers");   
 
 
 function App() {
@@ -19,17 +19,88 @@ function App() {
    const provider = new ethers.BrowserProvider(window.ethereum)
    const signer = provider.getSigner()
       
-  //const contractAddress = 'yourDeployedContractAddressGoesHere';
+  // your Deployed Contract Address Goes Here';
+  const contractAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+  const gorliAddress =  '0x03B440027c9dACB15e7a69525b68B9e5d059E62f';
+  
+  ///////
   //const ABI = "yourABIGoesHere"
-  //const contract = new ethers.Contract(contractAddress, ABI, signer);  
-
+  const ABI  =
+  [
+     {
+       "inputs": [
+         {
+           "internalType": "string",
+           "name": "_greeting",
+           "type": "string"
+         }
+       ],
+       "stateMutability": "nonpayable",
+       "type": "constructor"
+     },
+     {
+       "inputs": [],
+       "name": "deposit",
+       "outputs": [],
+       "stateMutability": "payable",
+       "type": "function"
+     },
+     {
+       "inputs": [],
+       "name": "greet",
+       "outputs": [
+         {
+           "internalType": "string",
+           "name": "",
+           "type": "string"
+         }
+       ],
+       "stateMutability": "view",
+       "type": "function"
+     },
+     {
+       "inputs": [
+         {
+           "internalType": "string",
+           "name": "_greeting",
+           "type": "string"
+         }
+       ],
+       "name": "setGreeting",
+       "outputs": [],
+       "stateMutability": "nonpayable",
+       "type": "function"
+     }
+   ]
+  
+    
+  
+   const contract = new ethers.Contract(contractAddress, ABI, signer);  
+/////////////////////////
   useEffect(() => {
     //const requestAccounts = async () => {
      const connectWallet = async () => {
       await provider.send("eth_requestAccounts", []);
       
     }
+    const getBalance = async () => {
+      const balance = await provider.getBalance(contractAddress);
+      
+      console.log(balance)
+      console.log( ethers.formatEther(balance)); 
+      // setBalance(ethers.utils.formatEther(balance));  
+      setBalance(ethers.formatEther(balance))
+    }
+    const getGreeting = async () => {
+      const greeting = await contract.greet();
+      setGreet(greeting);
+    }
+
     connectWallet().catch(console.err)
+ 
+    getBalance().catch(console.err)
+    getGreeting().catch(console.error)
+    
   }, [])
 
 
@@ -53,12 +124,12 @@ function App() {
   }
 
   const handleGreetingSubmit = async (e) => {
-    
     e.preventDefault();
     console.log(greetingValue)
-    //await contract.setGreeting(greetingValue)
-    //setGreet(greetingValue);
-   // setGreetingValue('');
+    const greetinUpate = await contract.setGreeting(greetingValue)
+    await greetinUpate.await()
+    setGreet(greetingValue);
+    setGreetingValue('');
   }
 
   return (
@@ -66,8 +137,9 @@ function App() {
       <div className="row mt-5">
 
         <div className="col">
-          <h3>Greeting  </h3>
-          <p>Contract Balance: { 0  } ETH</p>
+          <h3>{greet} </h3>
+          <p>Contract Balance: {balance} - ETH</p> 
+           
         </div>
 
         <div className="col">

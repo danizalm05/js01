@@ -1,4 +1,5 @@
- Blockchain Development Tutorial For Developers: Let's Create A Simple Dapp
+ Blockchain Development Tutorial For Developers: 
+ Let's Create A Simple Dapp
  
 Travis   Media
 
@@ -107,11 +108,18 @@ https://www.youtube.com/watch?v=LSL69RGeQL0
      a.  In terminal 1 run :
               cd ./contract
               npx hardhat node
-     b.  start metamask 
+     b.  start metamask (Stop  and restart)
          connect to hardhead account(localhost 8545)
          make sure there  is a connection
      c.  In terminal 2 run:
               cd ./client 
               npm run start  
 
-https://www.youtube.com/watch?v=LSL69RGeQL0  36:00              
+   
+
+D:\js01\Blockchain\travis\contract\artifacts\contracts\Greeter.sol\Greeter.json
+
+copy all contents of  ABI
+
+https://www.youtube.com/watch?v=LSL69RGeQL0  45:00           
+  

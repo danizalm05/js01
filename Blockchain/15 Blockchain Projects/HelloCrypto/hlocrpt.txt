@@ -1,0 +1,35 @@
+
+                       hello-crypto Projects 
+                    ------------------------------
+ https://www.interviewbit.com/blog/blockchain-projects/
+ https://github.com/alto-io/hello-crypto
+ 
+                     Creating Our Own ERC20 Token
+                     -----------------------------
+1. Set up Truffle then truffle init
+   
+     npm install -g truffle  //Truffle is  Ethereum development framework , 
+     truffle init   //initialize our project by  
+
+     The new files and directories created in our project are Truffle's deployment
+     scripts and config files.  
+2. Install OpenZeppelin
+   npm install @openzeppelin/contracts //using the example token smart contract from OpenZeppelin. 
+ 
+3. Open StandardToken.sol
+ This is almost a copy of @openzeppelin/contracts/token/ERC20/ERC20.sol 
+ which implements the IERC20.sol contract interface
+ but instead of having private member variables we will leave them as public. 
+
+
+5.  
+truffle develop  //setup a local test blockchain by using Truffle 
+    // The output is a list of Accounts and Private Keys
+
+ 
+ 6.  migrate //  Deploying the './contracts/SimpleToken.sol' contract  
+
+    This will compile our smart contracts into JSON under the build folder,
+    and also deploy the smart contracts unto the local blockchain. 
+ 
+ 
