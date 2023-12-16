@@ -40,10 +40,7 @@ Solidity varibles type
 constant varible = The constnt that never changes
     address public constant MY_ADDRESS = 0x777788889999AaAAbBbbCcccddDdeeeEfFFfCcCc;
  gaz cost of constant varible is cheper than non constant
-    address public immutable MY_ADDRESS; 
-Immutable variables =like constants. Values of immutable variables
- can be set inside the constructor but cannot be modified afterwards. 
-
+ 
 'msg' is a global varile in sollidity
 =========================================
   1. msg.sender  the   addres of the caller in the 'ethereum'
@@ -60,18 +57,15 @@ Immutable variables =like constants. Values of immutable variables
   ----------------------
  
   1.View function: a contract is going to read from storage, but not 
-    write to is. 
-  2.Pure function: a contract is not going to read or write from 
-    contract state, and everything you do only works with memory 
-    variables.
-  3.Payable function: ensures that the function can send and receive 
-    Ether. It can process transactions with non-zero Ether values and 
-    rejects any transactions with a zero Ether value.
+      write to is. 
+  2.Pure function: a contract is not going to read or write from contract state, 
+     and everything you do only works with memory variables.
+  3.Payable function: ensures that the function can send and receive Ether. It can process transactions with non-zero Ether values and rejects any transactions with a zero Ether value.
    
   Difference between external and public  
 ----------------------------------------
-  a.  public functions: Solidity  copies array arguments to memory.
-  b.  external functions: can read directly from call data.
+  public functions: Solidity  copies array arguments to memory.
+  external functions: can read directly from call data.
  
  Memory allocation is expensive, whereas reading from call data is cheap.
 
@@ -91,6 +85,8 @@ Immutable variables =like constants. Values of immutable variables
    After the function is finished data will be cleared. 
 
  
+  
+  
   3. Stack: All computations are happening in a data structure called
    a stack. 
    The stack consists of words of 256 bit each and has a maximum size 
