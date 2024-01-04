@@ -67,6 +67,8 @@ Immutable variables =like constants. Values of immutable variables
   3.Payable function: ensures that the function can send and receive 
     Ether. It can process transactions with non-zero Ether values and 
     rejects any transactions with a zero Ether value.
+	
+   error function :
    
   Difference between external and public  
 ----------------------------------------
