@@ -37,6 +37,34 @@ Solidity varibles type
 2.  local varibles =  declared inside a function not stored on the blockchain
 3.  global varible =  provides information about the blockchain 
 
+consepts
+
+ 1.  function Modifiers
+ 2.  functions  
+ 3.  error handling
+
+       ---------------   (_)  -------------------------
+
+prefix arguments with underscore (_) is a coding convention to avoid name 
+conflict with state variables 
+
+The meaning of understore is To differentiate between the state variable
+(the one that contains the permanent value), and the variable representing 
+the temporary value that's passed to the function. Its just a convention 
+to improve readability, so its obvious that the underscored variable is 
+related to the state variable of similar name.
+ 
+ 
+modifier onlyNewOwner (address _newOwner){
+
+        require (_newOwner != owner, "Only New Owner");
+
+        _; // check input and save gas
+}
+ 
+
+
+
 constant varible = The constnt that never changes
     address public constant MY_ADDRESS = 0x777788889999AaAAbBbbCcccddDdeeeEfFFfCcCc;
  gaz cost of constant varible is cheper than non constant
@@ -68,7 +96,7 @@ Immutable variables =like constants. Values of immutable variables
     Ether. It can process transactions with non-zero Ether values and 
     rejects any transactions with a zero Ether value.
 	
-   error function :
+   3.error function :
    
   Difference between external and public  
 ----------------------------------------
