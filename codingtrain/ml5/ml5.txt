@@ -1,0 +1,18 @@
+ Beginner's Guide to Machine Learning in JavaScript with ml5.js
+https://www.youtube.com/watch?v=26uABexmOX4&list=PLRqwX-V7Uu6YPSwT06y_AEYTqIwbeam3y&index=1
+ 
+ 
+ Code! Programming with p5.js for Beginners Trailer
+ https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA
+ https://p5js.org/reference/
+ 
+ 
+
+ Creative Coding with p5.js in Visual Studio Code
+ https://www.youtube.com/watch?v=1h6vZl-OuB0
+ 
+ 
+ 
+ Coding Challenge 179: Elementary Cellular Automata
+ https://www.youtube.com/watch?v=Ggxt06qSAe4   
+ 04:12
